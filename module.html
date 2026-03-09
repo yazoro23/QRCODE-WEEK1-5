@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEE2 · GROUP 1 WEEK 15 BLK 7 · actual page images</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #c4974a; border-radius: 8px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #6b3a1f, #8b5a2b); border-radius: 8px; }
+
+        :root {
+            --primary-dark: #3b1f0a;
+            --primary: #6b3a1f;
+            --primary-light: #8b5a2b;
+            --accent: #c4974a;
+            --text-light: #2e1a0a;
+            --shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 28px,
+                    rgba(90,50,10,0.06) 28px,
+                    rgba(90,50,10,0.06) 29px
+                ),
+                linear-gradient(160deg, #c9a050 0%, #b8873a 30%, #c4974a 60%, #a67832 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--text-light);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2e1a0a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            text-shadow: 1px 1px 0 rgba(255,220,150,0.4);
+        }
+        .logo span { color: #6b3a1f; }
+
+        .subtitle {
+            font-size: 16px;
+            color: #4a2c10;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .module-card {
+            background: rgba(244, 228, 185, 0.92);
+            border-radius: 15px;
+            padding: 25px 25px 30px 25px;
+            box-shadow: 0 8px 30px rgba(60,30,5,0.35), inset 0 0 60px rgba(180,120,40,0.08);
+            border: 2px solid #8b5a2b;
+            margin-bottom: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #b07840;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .card-header .week-icon {
+            font-size: 2.5rem;
+            color: #6b3a1f;
+            background: rgba(180,120,40,0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-header h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2e1a0a;
+            letter-spacing: 1px;
+        }
+        .card-header h2 small {
+            font-size: 1rem;
+            color: #7a4a20;
+            font-weight: 400;
+            margin-left: 12px;
+        }
+
+        .keypoints-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin: 25px 0 20px;
+            background: rgba(180,120,40,0.12);
+            border-radius: 60px;
+            padding: 18px 20px;
+            border: 1px solid #b07840;
+            backdrop-filter: blur(3px);
+        }
+        .keypoint-badge {
+            background: linear-gradient(145deg, #6b3a1f, #8b5a2b);
+            border: 1px solid #c4974a;
+            color: #f5e8c8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(60,30,5,0.3);
+            transition: 0.15s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .keypoint-badge i { color: #ffd966; font-size: 1.3rem; }
+        .keypoint-badge:hover {
+            background: linear-gradient(145deg, #8b5a2b, #a87030);
+            transform: scale(1.02);
+            border-color: #e8c070;
+        }
+
+        .page-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .week-divider {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2e1a0a;
+            margin: 10px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 8px solid #8b5a2b;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, rgba(180,120,40,0.2), transparent);
+            border-radius: 0 40px 40px 0;
+            width: 100%;
+        }
+        .week-divider i { color: #6b3a1f; font-size: 1.8rem; }
+
+        .page-image {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -5px rgba(60,30,5,0.5), 0 0 0 2px #b07840 inset;
+            background: #f4e8c8;
+            border: 1px solid #c4974a;
+        }
+        .page-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            background: white;
+            border-radius: 26px;
+        }
+
+        .page-note {
+            background: rgba(180,120,40,0.15);
+            border-radius: 18px;
+            padding: 12px 24px;
+            margin: 15px 0 10px;
+            border-left: 6px solid #8b5a2b;
+            color: #2e1a0a;
+            font-size: 1rem;
+        }
+
+        hr { border: 1px solid #b07840; margin: 10px 0 25px; }
+
+        .scroll-anchor { scroll-margin-top: 30px; }
+
+        @media (max-width: 700px) {
+            .card-header h2 { font-size: 1.6rem; }
+            .week-divider { font-size: 1.1rem; }
+            .keypoints-wrapper { border-radius: 30px; }
+        }
+
+        /* ===== FLOATING SIDE NAV ===== */
+        .float-nav {
+            position: fixed;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        .float-nav-toggle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #6b3a1f, #8b5a2b);
+            border: 2px solid #c4974a;
+            color: #ffd966;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(60,30,5,0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex-shrink: 0;
+            order: 2;
+        }
+        .float-nav-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 22px rgba(60,30,5,0.6);
+        }
+        .float-nav-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            pointer-events: none;
+            order: 1;
+        }
+        .float-nav-panel.open {
+            max-height: 500px;
+            opacity: 1;
+            pointer-events: all;
+        }
+        .float-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #6b3a1f, #8b5a2b);
+            border: 1px solid #c4974a;
+            color: #f5e8c8;
+            padding: 8px 16px 8px 12px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(60,30,5,0.35);
+            white-space: nowrap;
+            transition: background 0.15s, transform 0.15s;
+            font-family: 'Poppins', sans-serif;
+        }
+        .float-nav-link i { color: #ffd966; font-size: 0.9rem; }
+        .float-nav-link:hover {
+            background: linear-gradient(145deg, #8b5a2b, #a87030);
+            transform: translateX(-5px);
+            border-color: #ffd966;
+        }
+        .float-nav-link.active-week {
+            background: linear-gradient(145deg, #a87030, #c4974a);
+            border-color: #ffd966;
+            color: #fff;
+        }
+        @media (max-width: 700px) {
+            .float-nav {
+                right: unset;
+                top: unset;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                flex-direction: column-reverse;
+                align-items: stretch;
+                gap: 0;
+            }
+            .float-nav-toggle {
+                width: 100%;
+                height: 46px;
+                border-radius: 14px 14px 0 0;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                font-size: 0.9rem;
+                order: 1;
+                justify-content: center;
+                gap: 10px;
+            }
+            .float-nav-toggle::after {
+                content: 'Pumunta sa Week';
+                font-family: 'Poppins', sans-serif;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: #ffd966;
+            }
+            .float-nav-panel {
+                order: 2;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                background: rgba(50,20,5,0.97);
+                padding: 0 8px;
+                gap: 6px;
+                border-top: 1px solid #c4974a;
+                align-items: center;
+            }
+            .float-nav-panel.open {
+                max-height: 160px;
+                padding: 10px 8px;
+            }
+            .float-nav-link { font-size: 0.78rem; padding: 6px 12px; }
+            body { padding-bottom: 56px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="logo">
+            MODYUL SA PAGKATUTO SA GEE<span>2</span>:<br>
+            PAGBASA AT PAGSULAT TUNGO SA PANANALIKSIK
+        </div>
+        <div class="subtitle">GROUP 1 · WEEK 1-5 · BLK 7 · (actual page images)</div>
+    </div>
+
+    <div class="module-card">
+        <div class="card-header">
+            <div class="week-icon"><i class="fas fa-images"></i></div>
+            <h2>Module Pages <small>scroll through screenshots ↓</small></h2>
+        </div>
+
+        <!-- Quick nav -->
+        <div class="keypoints-wrapper">
+            <a href="#week1-start" class="keypoint-badge"><i class="fas fa-arrow-right"></i> Week 1</a>
+            <a href="#week2-start" class="keypoint-badge"><i class="fas fa-arrow-right"></i> Week 2</a>
+            <a href="#week3-start" class="keypoint-badge"><i class="fas fa-arrow-right"></i> Week 3</a>
+            <a href="#week4-start" class="keypoint-badge"><i class="fas fa-arrow-right"></i> Week 4</a>
+            <a href="#week5-start" class="keypoint-badge"><i class="fas fa-arrow-right"></i> Week 5</a>
+        </div>
+
+        <div class="page-grid">
+
+            <!-- ===== WEEK 1 ===== -->
+            <div id="week1-start" class="week-divider scroll-anchor">
+                <i class="fas fa-calendar-week"></i> WEEK 1 – PAGBASA: MGA SALALAYANG KAALAMAN PAGBASA
+            </div>
+            <div class="page-image"><img src="images/page-1.jpg" alt="Week 1 Page 1"></div>
+            <div class="page-image"><img src="images/page-2.jpg" alt="Week 1 Page 2"></div>
+            <div class="page-image"><img src="images/page-3.jpg" alt="Week 1 Page 3"></div>
+
+            <!-- ===== WEEK 2 ===== -->
+            <div id="week2-start" class="week-divider scroll-anchor" style="margin-top:10px;">
+                <i class="fas fa-language"></i> WEEK 2 – HULWARAN AT ORGANISASYON NG TEKSTONG EKSPOSITORI
+            </div>
+            <div class="page-image"><img src="images/page-4.jpg"  alt="Week 2 Page 4"></div>
+            <div class="page-image"><img src="images/page-5.jpg"  alt="Week 2 Page 5"></div>
+            <div class="page-image"><img src="images/page-6.jpg"  alt="Week 2 Page 6"></div>
+            <div class="page-image"><img src="images/page-7.jpg"  alt="Week 3 Page 7"></div>
+
+            <!-- ===== WEEK 3 ===== -->
+            <div id="week3-start" class="week-divider scroll-anchor" style="margin-top:10px;">
+                <i class="fas fa-pen-fancy"></i> WEEK 3 – MGA KASANAYAN SA AKADEMIKONG PAGBASA
+            </div>
+            <div class="page-image"><img src="images/page-8.jpg" alt="Week 3 Page 8"></div>
+            <div class="page-image"><img src="images/page-9.jpg" alt="Week 3 Page 9"></div>
+
+            <!-- ===== WEEK 4 ===== -->
+            <div id="week4-start" class="week-divider scroll-anchor" style="margin-top:10px;">
+                <i class="fas fa-pen-fancy"></i> WEEK 4 – MGA KASANAYAN SA AKADEMIKONG PAGBASA
+            </div>
+            <div class="page-image"><img src="images/page-10.jpg" alt="Week 4 Page 10"></div>
+            <div class="page-image"><img src="images/page-11.jpg" alt="Week 4 Page 11"></div>
+            <div class="page-image"><img src="images/page-12.jpg" alt="Week 4 Page 12"></div>
+            <div class="page-image"><img src="images/page-13.jpg" alt="Week 4 Page 13"></div>
+            <div class="page-image"><img src="images/page-14.jpg" alt="Week 4 Page 14"></div>
+            <div class="page-image"><img src="images/page-15.jpg" alt="Week 4 Page 15"></div>
+            <div class="page-image"><img src="images/page-16.jpg" alt="Week 4 Page 16"></div>
+
+            <!-- ===== WEEK 5 ===== -->
+            <div id="week5-start" class="week-divider scroll-anchor" style="margin-top:10px;">
+                <i class="fas fa-globe-asia"></i> WEEK 5 – FILIPINO SA IBA'T IBANG DISIPLINA
+            </div>
+            <div class="page-image"><img src="images/page-17.jpg" alt="Week 5 Page 17"></div>
+            <div class="page-image"><img src="images/page-18.jpg" alt="Week 5 Page 18"></div>
+            <div class="page-image"><img src="images/page-19.jpg" alt="Week 5 Page 19"></div>
+
+        </div>
+        <br>
+        <hr>
+
+    </div>
+
+    <div style="text-align:center; color:#4a2c10; padding:20px; font-weight:500;">
+        <i class="fas fa-university"></i> SOUTH EAST ASIAN INSTITUTE OF TECHNOLOGY, INC. · COLLEGE OF EDUCATION
+    </div>
+
+</div>
+
+    <!-- ===== FLOATING SIDE NAV ===== -->
+    <div class="float-nav" id="floatNav">
+        <button class="float-nav-toggle" id="floatToggle" onclick="toggleNav()" title="Go to Week">
+            <i class="fas fa-book-open"></i>
+        </button>
+        <div class="float-nav-panel" id="floatPanel">
+            <a href="#week1-start" class="float-nav-link" onclick="closeNav()"><i class="fas fa-1"></i> Week 1</a>
+            <a href="#week2-start" class="float-nav-link" onclick="closeNav()"><i class="fas fa-2"></i> Week 2</a>
+            <a href="#week3-start" class="float-nav-link" onclick="closeNav()"><i class="fas fa-3"></i> Week 3</a>
+            <a href="#week4-start" class="float-nav-link" onclick="closeNav()"><i class="fas fa-4"></i> Week 4</a>
+            <a href="#week5-start" class="float-nav-link" onclick="closeNav()"><i class="fas fa-5"></i> Week 5</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('floatPanel').classList.toggle('open');
+        }
+        function closeNav() {
+            document.getElementById('floatPanel').classList.remove('open');
+        }
+        // close panel when clicking outside
+        document.addEventListener('click', function(e) {
+            var nav = document.getElementById('floatNav');
+            if (!nav.contains(e.target)) closeNav();
+        });
+        // highlight active week on scroll
+        var weeks = ['week1-start','week2-start','week3-start','week4-start','week5-start'];
+        var links = document.querySelectorAll('.float-nav-link');
+        window.addEventListener('scroll', function() {
+            var scrollY = window.scrollY + 120;
+            var current = 0;
+            weeks.forEach(function(id, i) {
+                var el = document.getElementById(id);
+                if (el && el.offsetTop <= scrollY) current = i;
+            });
+            links.forEach(function(l, i) {
+                l.classList.toggle('active-week', i === current);
+            });
+        });
+    </script>
+</body>
+</html>
